@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar Salário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="topo">
+        <h1>Controle de Funcionários</h1>
+    </div>
+    <div class="menu">
+        <a href="cadastrar.html" class="ativo">Cadastrar</a> | 
+        <a href="salario.html">Alterar Salário</a> |
+        <a href="demissao.html">Demissão</a> |
+        <a href="listagem.html">Listar</a>
+    </div>
+    <div class="principal">
+        <div class="formulario-funcionario">
+            <h2>Alterar Salário</h2>      
+                <label>CPF:</label><br>
+                <input id="cpf2" type="text"><br><br>
+                <label>Novo salário:</label><br>
+                <input id="salario2" type="number"><br><br>
+                <button id="alterar" onclick="alterar()">Alterar Salário</button>
+        </div>
+    </div>
+</body>
+</html>

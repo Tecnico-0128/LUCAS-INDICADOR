@@ -25,12 +25,10 @@ function cadastrar() {
         alert(`Todos os campos devem ser preenchidos!`);
         return;
     }
-    console.log("a")
     if (!/^[A-Za-z\sÀ-ý]+$/.test(nome.value)) {
         alert(`O nome só pode conter letras, espaços e acentos!`);
         return;
     }
-    console.log("b")
     if (!/^\d{11}$/.test(cpf.value)) {
         alert(`O CPF deve conter somente 11 digítos e somente números!`);
         return;
@@ -87,6 +85,10 @@ function alterar() {
     }
     if (Number(salario2.value) < funcionarios[indice].salario) {
         alert(`O novo salário tem que ser maior que o antigo!`);
+        return;
+    }
+    if(funcionarios[indice].estado.toUpperCase().trim() == "demitido".toUpperCase().trim()){
+        alert(`Não pode atualizar o salário de um funcionário demitido!`);
         return;
     }
     funcionarios[indice].salario = Number(salario2.value);

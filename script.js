@@ -112,6 +112,10 @@ function demitir() {
         alert(`Este funcionário não foi encontrado!`);
         return;
     }
+    if(funcionarios[indice].estado.toUpperCase().trim() == "demitido".toUpperCase().trim()){
+        alert(`Este funcionáario já foi demitido!`);
+        return;
+    }
     funcionarios[indice].estado = "demitido";
     localStorage.setItem("funcionarios", JSON.stringify(funcionarios))
     alert("Funcionário demitido!")
